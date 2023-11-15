@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>資料視覺化期中作業</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#" class="icon solid fa-home"><span>Home</span></a>
+						<!-- <a href="#work" class="icon solid fa-folder"><span>Work</span></a> -->
+						<!-- <a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a> -->
+						<a href="#age" class="icon solid fa-baby"><span>age</span></a>
+						<a href="#HIV" class="icon solid fa-hospital"><span>HIV</span></a>
+						<a href="#cost" class="icon solid fa-dollar-sign"><span>cost</span></a>
+						
+						<!-- <a href="https://twitter.com/ajlkn" class="icon brands fa-twitter"><span>Twitter</span></a> -->
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="home" class="panel intro">
+								<header>
+									<h1>110802503 曾友亭</h1>
+									<p>生醫三 </p>
+								</header>
+								<a href="#Love" class="jumplink pic">
+									<span class="arrow icon solid fa-chevron-right"><span>See</span></span>
+									<img src="images/me.jpg" alt="" />
+								</a>
+							</article>
+
+						<!-- Love -->
+							<article id="Love" class="panel">
+								<header>
+									<h2>我喜歡貓咪</h2>
+								</header>
+								<p>
+								</p>
+								<section>
+									<div class="row">
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/1.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/2.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/3.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/4.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/5.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/6.jpg" alt=""></a>
+										</div>
+										
+										
+									</div>
+								</section>
+							</article>
+							
+						<!-- age -->
+							<article id="age" class="panel">
+								<header>
+									<h2>民國93到民國111年桃園市平均初婚年齡與生育年齡</h2>
+								</header>
+								<p>
+								由此三張折線圖可知，桃園市的男性或女性均有晚婚的趨勢，而女性生育第1胎的平均年齡自104年起開始超過30歲，生育年齡逐漸延後。
+								(資料來源:政府資料開放平台_桃園市初婚者平均年齡、政府資料開放平台_桃園市生母生育第1胎平均年齡)
+								</p>
+								<form action="#" method="post">
+									<div>
+										<div class="row"></div>
+									</div>
+								</form>
+								<div id="myGraph_age"></div>
+								<a href="#explain1" class="jumplink pic">
+									<span class="arrow icon solid fa-chevron-right"><span>line and scatter chart製作說明</span></span>	
+								</a>
+							</article>
+							<article id="explain1" class="panel">
+								<header>
+									<h2>line and scatter chart 製作</h2>
+								</header>
+								<p>
+								資料來自政府資料開放平台，因為所需的資料數據不複雜，我直接將資料貼到data_cost.js。
+								我使用updatemenus和visible讓圖表有多種呈現方式，可以單獨看到男性初婚者平均年齡、女性初婚者平均年齡、生母生育第一胎平均年齡的折線圖，以及同時比較三條折線圖，
+								幫助觀看者更清楚看到初婚年齡和生育年齡之間的關係。
+								其中，初婚者平均年齡的折線圖的顏色，我設定女性是紅色、男性是藍色，增加易讀性。
+								在生母生育第一胎平均年齡的折線圖上，我有設定字型和字體大小，
+								線的形狀套用spline，使線看起來較圓滑，並且特別標示出每次年齡整數增加時的數值。
+								</p>
+							</article>
+
+						
+                
+					    <!-- HIV -->
+						<article id="HIV" class="panel">
+							<header>
+								<h2>民國93年到民國111年桃園市HIV感染人數</h2>                                                                                                                                                                                                                                                               
+							</header>
+							<p>
+							此長條圖說明，桃園市每年感染HIV的男性人數遠高於感染HIV的女性人數，並於民國94年有超過500人感染HIV。
+
+							(資料來源:政府資料開放平台_桃園市HIV感染人數)
+							</p>
+							<form action="#" method="post">
+								<div>
+									<div class="row"></div>	
+								</div>	
+							</form>
+							<div id="myGraph_HIV"></div>   
+							<a href="#explain2" class="jumplink pic">
+								<span class="arrow icon solid fa-chevron-right"><span>bar chart製作說明</span></span>
+								
+							</a>
+						</article>
+						<article id="explain2" class="panel">
+							<header>
+								<h2>bar chart 製作</h2>
+							</header>
+							<p>
+						     資料來自政府資料開放平台，用d3取得本機單一csv檔，此方法適用於資料集龐大的時候。之前我忘記在index.html寫入<script src="//unpkg.com/d3"></script>，導致資料讀取不進來。
+							 長條圖顏色設定男性是藍色，女性是紅色，並且用opacity，使他們有些透明。最後用barmode:'stack'，將他們以堆疊的方式呈現，可以比較每一年桃園市感染HIV的總人數變化。
+							</p>
+						</article>
+						
+	
+			            <!-- cost -->
+						<article id="cost" class="panel">
+							<header>
+								<h2>我112年的旅遊支出</h2>
+							</header>
+							<p>
+							從圓餅圖可知，我在112年二月台南行和六月台南行的前三高支出依序是衣服、食物、交通，七月花蓮行的前三高支出則依序是食物、交通和住宿。
+							其中，六月台南行的前三高支出分配較為平均，二月台南行在衣服的支出比例最高，七月花蓮行在食物的支出比例最高。
+							(資料來源:我112年的旅遊支出)
+							</p>
+							<form action="#" method="post">
+								<div>
+									<div class="row"></div>
+								</div>
+							</form>
+							<div id="myGraph_cost"></div>
+							<a href="#explain3" class="jumplink pic">
+								<span class="arrow icon solid fa-chevron-right"><span>pie chart製作說明</span></span>
+								
+							</a>
+						</article>
+						<article id="explain3" class="panel">
+							<header>
+								<h2>pie chart 製作</h2>
+							</header>
+							<p>
+						資料來自我今年旅遊的支出統計，我將支出金額分別打在data_cost.js的集合裡面，在main_cost.js的type設定為pie chart，就可以直接幫我轉換成百分比。
+						我使用hole使pie chart變成甜甜圈中空的形狀，使用hoverinfo讓圓餅圖上顯示label(類別)、value(實際支出金額)、percentage(百分比)。
+						在total的圓餅圖上，我讓塗色部分使用pattern.shape以不同花樣、圖案呈現，
+						再用solidity調整圖案填滿的密實度，並讓字變黑色和增加字體大小。
+							</p>
+						</article>
+
+
+		
+
+
+						
+			
+			
+			
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+            <script src="age/data_age.js"></script>
+            <script src="age/main_age.js"></script>
+			<script src="//unpkg.com/d3"></script>
+			<script src="HIV/data_HIV.js"></script>
+            <script src="HIV/main_HIV.js"></script>
+			<script src="cost/data_cost.js"></script>
+            <script src="cost/main_cost.js"></script>
+			
+	</body>
+</html>
